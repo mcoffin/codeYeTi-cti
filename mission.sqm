@@ -8,18 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=99;
+		nextID=113;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={4418.8389,71.272003,2916.1318};
-		dir[]={0.24312253,-0.33523121,0.91022617};
-		up[]={0.086507984,0.94213587,0.32387716};
-		aside[]={0.96613044,2.1420419e-008,-0.25805452};
+		pos[]={4404.418,217.7244,3166.8374};
+		dir[]={-0.064913303,-0.21767299,-0.97386587};
+		up[]={-0.014477273,0.97601855,-0.21719518};
+		aside[]={-0.99779111,2.1442247e-007,0.066507749};
 	};
 };
 binarizationWanted=0;
@@ -629,6 +633,7 @@ class Mission
 			};
 			id=28;
 			type="Flag_NATO_F";
+			atlOffset=-3.8146973e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1232,245 +1237,84 @@ class Mission
 				items=6;
 				class Item0
 				{
-					dataType="Object";
+					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2413.689,71.358116,7217.1328};
+						position[]={1713.319,2.9875946,6149.8208};
+						angles[]={0.018657569,0,0.013334315};
 					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						init="[this, ""Communications Tower""] call CTI_fnc_initCapturePoint;";
-					};
-					id=92;
-					type="Flag_White_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					init="[this, ""Laikoro""] call CTI_fnc_initCapturePoint;";
+					id=104;
+					type="Logic";
 				};
 				class Item1
 				{
-					dataType="Object";
+					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1713.426,6.9661179,6149.8052};
+						position[]={2413.634,67.499435,7217.1411};
+						angles[]={0.018657569,0,0.013334315};
 					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						init="[this, ""Laikoro""] call CTI_fnc_initCapturePoint;";
-					};
-					id=94;
-					type="Flag_White_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					init="[this, ""Communications Tower""] call CTI_fnc_initCapturePoint;";
+					id=105;
+					type="Logic";
+					atlOffset=0.1210022;
 				};
 				class Item2
 				{
-					dataType="Object";
+					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={3396.6189,18.532364,6628.2632};
+						position[]={3396.821,14.361485,6628.6509};
+						angles[]={0.018657569,0,0.013334315};
 					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						init="[this, ""Rautake""] call CTI_fnc_initCapturePoint;";
-					};
-					id=95;
-					type="Flag_White_F";
-					atlOffset=0.055999756;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					init="[this, ""Rautake""] call CTI_fnc_initCapturePoint;";
+					id=106;
+					type="Logic";
+					atlOffset=-0.079999924;
 				};
 				class Item3
 				{
-					dataType="Object";
+					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={7081.9868,9.4696264,4232.396};
+						position[]={4798.3281,33.225433,5222.6138};
+						angles[]={0.018657569,0,0.013334315};
 					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						init="[this, ""Docks""] call CTI_fnc_initCapturePoint;";
-					};
-					id=96;
-					type="Flag_White_F";
-					atlOffset=-4.7683716e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					init="[this, ""Bridge""] call CTI_fnc_initCapturePoint;";
+					id=107;
+					type="Logic";
+					atlOffset=0.039001465;
 				};
 				class Item4
 				{
-					dataType="Object";
+					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={5484.498,7.6340642,4048.2251};
+						position[]={5484.1548,3.643681,4048.7561};
+						angles[]={0.018657569,0,0.013334315};
 					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						init="[this, ""Katkoula""] call CTI_fnc_initCapturePoint;";
-					};
-					id=97;
-					type="Flag_White_F";
-					atlOffset=0.0030002594;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					init="[this, ""Katkoula""] call CTI_fnc_initCapturePoint;";
+					id=108;
+					type="Logic";
+					atlOffset=-0.0039997101;
 				};
 				class Item5
 				{
-					dataType="Object";
+					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={4798.3618,37.154228,5222.5889};
+						position[]={7081.9131,5.4544787,4232.4722};
+						angles[]={0.018657569,0,0.013334315};
 					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						init="[this, ""Bridge""] call CTI_fnc_initCapturePoint;";
-					};
-					id=98;
-					type="Flag_White_F";
-					atlOffset=-0.011001587;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					init="[this, ""Savaka""] call CTI_fnc_initCapturePoint;";
+					id=109;
+					type="Logic";
+					atlOffset=-0.051000595;
 				};
 			};
 			id=86;
-			atlOffset=14.279852;
+			atlOffset=7.9445438;
 		};
 	};
 	class Connections
@@ -1505,8 +1349,8 @@ class Mission
 			class Item2
 			{
 				linkID=2;
-				item0=94;
-				item1=92;
+				item0=108;
+				item1=107;
 				class CustomData
 				{
 					type="Sync";
@@ -1515,8 +1359,8 @@ class Mission
 			class Item3
 			{
 				linkID=3;
-				item0=94;
-				item1=95;
+				item0=108;
+				item1=109;
 				class CustomData
 				{
 					type="Sync";
@@ -1525,8 +1369,8 @@ class Mission
 			class Item4
 			{
 				linkID=4;
-				item0=95;
-				item1=92;
+				item0=109;
+				item1=107;
 				class CustomData
 				{
 					type="Sync";
@@ -1535,8 +1379,8 @@ class Mission
 			class Item5
 			{
 				linkID=5;
-				item0=98;
-				item1=95;
+				item0=107;
+				item1=106;
 				class CustomData
 				{
 					type="Sync";
@@ -1545,8 +1389,8 @@ class Mission
 			class Item6
 			{
 				linkID=6;
-				item0=98;
-				item1=96;
+				item0=106;
+				item1=104;
 				class CustomData
 				{
 					type="Sync";
@@ -1555,8 +1399,8 @@ class Mission
 			class Item7
 			{
 				linkID=7;
-				item0=98;
-				item1=97;
+				item0=104;
+				item1=105;
 				class CustomData
 				{
 					type="Sync";
@@ -1565,8 +1409,8 @@ class Mission
 			class Item8
 			{
 				linkID=8;
-				item0=97;
-				item1=96;
+				item0=105;
+				item1=106;
 				class CustomData
 				{
 					type="Sync";

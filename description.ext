@@ -18,6 +18,8 @@ class CfgFunctions {
 			class canRevive {};
 			class makeRevivable {};
 			class initCapturePoint {};
+			class updateCapMarker {};
+			class ownershipLoop {};
 		};
 		class utilities {
 			class respawnPrefix {};
@@ -25,6 +27,12 @@ class CfgFunctions {
 		};
 		class handlers {
 			class onInventoryOpened {};
+		};
+	};
+	class codeYeTi {
+		tag = "codeYeTi";
+		class codeYeTi_utilities {
+			class createLineMarker {};
 		};
 	};
 };

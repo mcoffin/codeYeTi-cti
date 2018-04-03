@@ -4,6 +4,7 @@ private ["_side", "_markerType", "_markerName"];
 switch (_stage) do {
 	case "preInit": {
 		cti_sides = [];
+		cti_caps = [];
 	};
 	case "postInit": {
 		{
@@ -16,6 +17,7 @@ switch (_stage) do {
 			_markerName setMarkerTypeLocal _markerType;
 			_markerName setMarkerTextLocal "HQ";
 		} forEach cti_sides;
+		[] spawn CTI_fnc_ownershipLoop;
 	};
 };
 1
