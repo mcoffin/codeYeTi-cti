@@ -17,6 +17,7 @@ class CfgFunctions {
 			class revived {};
 			class canRevive {};
 			class makeRevivable {};
+			class initCapturePoint {};
 		};
 		class utilities {
 			class respawnPrefix {};
