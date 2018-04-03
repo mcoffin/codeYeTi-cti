@@ -3,7 +3,7 @@ DisabledAI = 1;
 respawn = "BASE";
 respawnDelay = 15;
 respawnOnStart = 1;
-respawnTemplates[] = {"Base","MenuPosition"};
+respawnTemplates[] = {"Base", "MenuPosition"};
 
 class CfgFunctions {
 	class codeYeTi_cti {
@@ -14,6 +14,7 @@ class CfgFunctions {
 				postInit = 1;
 			};
 			class logicSide {};
+			class revived {};
 		};
 		class utilities {
 			class respawnPrefix {};
