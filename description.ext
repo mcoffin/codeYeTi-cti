@@ -1,0 +1,30 @@
+DisabledAI = 1;
+
+respawn = "BASE";
+respawnDelay = 15;
+respawnOnStart = 1;
+respawnTemplates[] = {"Base","MenuPosition"};
+
+class CfgFunctions {
+	class codeYeTi_cti {
+		tag = "CTI";
+		class core {
+			class initSides {
+				preInit = 1;
+				postInit = 1;
+			};
+			class logicSide {};
+		};
+		class utilities {
+			class respawnPrefix {};
+			class isBackpack {};
+		};
+		class handlers {
+			class onInventoryOpened {};
+		};
+	};
+};
+
+class codeYeTi_cti_config {
+	#include "cti.cpp"
+}
