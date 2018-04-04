@@ -4,4 +4,7 @@ params [
 ];
 
 removeAllWeapons _unit;
-[_unit] remoteExecCall ["CTI_fnc_makeRevivable", 0];
+
+if (_unit call CTI_fnc_canBeRevived) then {
+	[_unit] remoteExecCall ["CTI_fnc_makeRevivable", 0];
+};
