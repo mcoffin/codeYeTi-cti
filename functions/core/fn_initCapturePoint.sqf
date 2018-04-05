@@ -20,6 +20,12 @@ if (isServer) then {
 	_nameMarker setMarkerText _name;
 	
 	[_flag, _name] call CTI_fnc_updateCapMarker;
+
+	private _trigger = createTrigger ["EmptyDetector", getPos _flag, false];
+	_trigger setTriggerArea [_capRadius, _capRadius, 0, false];
+	_trigger setTriggerActivation ["ANY", "PRESENT", true];
+	_trigger setTriggerStatements ["false", "", ""];
+	_flag setVariable ["cti_trigger", _trigger];
 };
 
 {

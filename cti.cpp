@@ -8,6 +8,7 @@ class factions {
 };
 
 class CapturePoint {
+	maxCaptureRate = 5;
 	tickDuration = 30;
 	maxOwnership = 100;
 	radius = 100;
