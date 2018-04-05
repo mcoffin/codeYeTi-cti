@@ -1,7 +1,7 @@
 DisabledAI = 1;
 
 respawn = "BASE";
-respawnDelay = 15;
+respawnDelay = 5;
 respawnOnStart = 1;
 respawnTemplates[] = {"Base", "MenuPosition"};
 
@@ -11,6 +11,10 @@ class CfgFunctions {
 		class core {
 			class initSides {
 				preInit = 1;
+				postInit = 1;
+			};
+			class initHUD {
+				preInit = 0;
 				postInit = 1;
 			};
 			class logicSide {};
@@ -31,6 +35,9 @@ class CfgFunctions {
 		class handlers {
 			class onInventoryOpened {};
 		};
+		class progressBar {
+			class updateProgressBar {};
+		};
 	};
 	class codeYeTi {
 		tag = "codeYeTi";
@@ -40,6 +47,16 @@ class CfgFunctions {
 	};
 };
 
+class RscText;
+class RscProgress {
+	type = 8;
+	style = 0;
+};
+
+class RscTitles {
+	#include "dialogs/hud.hpp"
+};
+
 class codeYeTi_cti_config {
 	#include "cti.cpp"
-}
+};
