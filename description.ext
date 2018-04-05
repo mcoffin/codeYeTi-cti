@@ -21,10 +21,12 @@ class CfgFunctions {
 			class initCapturePoint {};
 			class updateCapMarker {};
 			class ownershipLoop {};
+			class setSafeZone {};
 		};
 		class utilities {
 			class respawnPrefix {};
 			class isBackpack {};
+			class sideColor {};
 		};
 		class handlers {
 			class onInventoryOpened {};

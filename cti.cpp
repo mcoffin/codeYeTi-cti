@@ -7,6 +7,10 @@ class factions {
 	};
 };
 
+class Headquarters {
+	safeZoneRadius = 500;
+};
+
 class CapturePoint {
 	maxCaptureRate = 5;
 	tickDuration = 30;

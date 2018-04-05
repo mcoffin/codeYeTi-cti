@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=115;
+		nextID=117;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7;
+		nextID=9;
 	};
 	class Camera
 	{
@@ -663,8 +663,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4480.1475,48.902737,3026.5945};
-				angles[]={6.2805109,0,0.079830915};
+				position[]={4480.147,48.902699,3026.594};
+				angles[]={6.2805147,0,0.079831354};
 			};
 			init="cti_sides append [this];";
 			id=39;
