@@ -37,6 +37,22 @@ switch (_stage) do {
 		} forEach cti_sides;
 
 		if (isServer) then {
+			private ["_fnc_onPlayerConnected"];
+			_fnc_onPlayerConnected = {
+				params ["_id", "_uid", "_name", "_jip", "_owner"];
+				if (isServer) then {
+					private _moneyVar = format ["cti_money_%1", _uid];
+					private _defaultMoney = getNumber (missionConfigFile >> "codeYeTi_cti_config" >> "Player" >> "startingMoney");
+					if (isNil _moneyVar) then {
+						missionNamespace setVariable [_moneyVar, _defaultMoney];
+					};
+					_owner publicVariableClient _moneyVar;
+				};
+			};
+			["cti_onPlayerConnected_server", "onPlayerConnected", _fnc_onPlayerConnected, []] call BIS_fnc_addStackedEventHandler;
+			if (hasInterface) then {
+				[nil, getPlayerUID player, profileName, false, clientOwner] call _fnc_onPlayerConnected;
+			};
 			[] spawn CTI_fnc_ownershipLoop;
 		};
 	};

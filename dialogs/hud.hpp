@@ -33,5 +33,19 @@ class CTI_ProgressBar_Health_label: RscText {
 	colorBackground[] = { 0, 0, 0, 0 };
 	colorText[] = { 1, 1, 1, 1 };
 };
+		class CTI_Money: RscText {
+			idc = 1010;
+			text = "money";
+			type = 0;
+			style = 0x02;
+			font = "EtelkaMonospacePro";
+			sizeEx = 0.04 - 0.005;
+			x = (safezoneX + safezoneW - (safezoneW * 0.1));
+			y = (safezoneY + safezoneH - (0.04 * 2));
+			w = (safezoneW * 0.1);
+			h = 0.04;
+			colorBackground[] = { 0, 0, 0, 0 };
+			colorText[] = { 1, 1, 1, 1 };
+		};
 	};
 };

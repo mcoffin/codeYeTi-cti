@@ -7,6 +7,10 @@ class factions {
 	};
 };
 
+class Player {
+	startingMoney = 5000;
+};
+
 class Headquarters {
 	safeZoneRadius = 500;
 };

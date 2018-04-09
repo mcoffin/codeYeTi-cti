@@ -1,7 +1,7 @@
 disableSerialization;
 if (hasInterface) then {
 	[] spawn {
-		private ["_dmg", "_hudBase", "_hudDisplay"];
+		private ["_dmg", "_hudBase", "_hudDisplay", "_fnc_onMoneyChange", "_moneyVar"];
 		_hudBase = 1000;
 
 		waitUntil {! isNull findDisplay 46};
@@ -12,6 +12,18 @@ if (hasInterface) then {
 		_hudDisplay = cti_hud;
 
 		[_hudDisplay, _hudBase, 1.0] call CTI_fnc_updateProgressBar;
+
+		_moneyVar = format ["cti_money_%1", getPlayerUID player];
+		_fnc_onMoneyChange = {
+			private _money = _this select 1;
+			private _label = cti_hud displayCtrl 1010;
+			_label ctrlSetText (format ["$%1", _money]);
+		};
+		_moneyVar addPublicVariableEventHandler _fnc_onMoneyChange;
+		if (isServer) then {
+			waitUntil {!isNil _moneyVar};
+			[_moneyVar, missionNamespace getVariable [_moneyVar, -1]] call _fnc_onMoneyChange;
+		};
 
 		while {!isNil "cti_winner"} do {
 			_dmg = damage player;
