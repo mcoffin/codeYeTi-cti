@@ -43,3 +43,16 @@ class optic_ERCO_blk_F: optic_base {};
 class optic_ERCO_khk_F: optic_base {};
 class optic_ERCO_snd_F: optic_base {};
 class optic_hamr: optic_base {};
+
+class basic_item_base {
+	price = 0;
+};
+
+class ItemWatch: basic_item_base {};
+class ItemCompass: basic_item_base {};
+class ItemRadio: basic_item_base {};
+class ItemMap: basic_item_base {};
+
+class ItemGPS {
+	price = 100;
+};

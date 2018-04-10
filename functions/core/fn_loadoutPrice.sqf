@@ -64,6 +64,12 @@ _newItems append (magazines _unit);
 } forEach (_newItems);
 
 {
+	if (("assignedItems" call _fnc_getLoadoutVariable) find _x < 0) then {
+		_purchases append [[_x, 1]];
+	};
+} forEach (assignedItems _unit);
+
+{
 	private _item = _x select 0;
 	private _quantity = _x select 1;
 	private _itemCost = _item call CTI_fnc_itemPrice;
@@ -73,4 +79,5 @@ _newItems append (magazines _unit);
 		_total = (_itemCost * _quantity) + _total;
 	};
 } forEach _purchases;
+
 _total

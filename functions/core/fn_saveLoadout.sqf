@@ -7,3 +7,4 @@ _unit setVariable [format ["%1_backpack", _prefix], backpack _unit];
 _unit setVariable [format ["%1_items", _prefix], items _unit];
 _unit setVariable [format ["%1_weapons", _prefix], weaponsItems _unit];
 _unit setVariable [format ["%1_magazines", _prefix], magazines _unit];
+_unit setVariable [format ["%1_assignedItems", _prefix], assignedItems _unit];

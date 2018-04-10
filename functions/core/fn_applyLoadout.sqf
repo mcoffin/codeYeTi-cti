@@ -1,5 +1,5 @@
 params ["_unit", "_prefix"];
-private ["_headgear", "_uniform", "_vest", "_backpack", "_items", "_magazines"];
+private ["_headgear", "_uniform", "_vest", "_backpack", "_items", "_magazines", "_assignedItems"];
 
 removeAllWeapons _unit;
 removeAllItems _unit;
@@ -70,3 +70,6 @@ if (!isNil "_magazines") then {
 if (!isNil "_items") then {
 	{ _unit addItem _x } forEach _items;
 };
+
+_assignedItems = _unit getVariable [format["%1_assignedItems", _prefix], []];
+{ _unit linkItem _x } forEach _assignedItems;

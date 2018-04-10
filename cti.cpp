@@ -12,6 +12,11 @@ class factions {
 			"srifle_EBR_F"
 		};
 		arsenalItems[] = {
+			"ItemWatch",
+			"ItemCompass",
+			"ItemRadio",
+			"ItemMap",
+			"ItemGPS",
 			"optic_MRCO",
 			"optic_Arco",
 			"optic_Arco_blk_F",
