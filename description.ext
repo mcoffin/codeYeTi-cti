@@ -31,6 +31,7 @@ class CfgFunctions {
 			class deleteLoadout {};
 			class itemPrice {};
 			class loadoutPrice {};
+			class canCapture {};
 		};
 		class utilities {
 			class respawnPrefix {};
@@ -43,11 +44,22 @@ class CfgFunctions {
 		class progressBar {
 			class updateProgressBar {};
 		};
+		class jump {
+			class initJump {};
+			class canJump {};
+			class jumpKeyHandler {};
+		};
 	};
 	class codeYeTi {
 		tag = "codeYeTi";
 		class codeYeTi_utilities {
 			class createLineMarker {};
+		};
+	};
+	class Imported_Life {
+		tag = "life";
+		class Life {
+			class jumpFnc {};
 		};
 	};
 };

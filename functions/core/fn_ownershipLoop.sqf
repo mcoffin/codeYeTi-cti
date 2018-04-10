@@ -29,7 +29,7 @@ while { isNil "cti_winner" } do {
 		_controllingSideDelta = _controllingSideDelta max (0 - _maxCaptureRate);
 		if (_controllingSide != sideUnknown) then {
 			_owningSide = _cap getVariable ["cti_faction", sideUnknown];
-			if (_owningSide != _controllingSide) then {
+			if (_owningSide != _controllingSide && [_controllingSide, _cap] call CTI_fnc_canCapture) then {
 				private _ownership = _cap getVariable ["cti_ownership", _maxOwnership];
 				_ownership = _ownership + _controllingSideDelta;
 				_ownership = if (_ownership < 0) then {
@@ -63,4 +63,5 @@ while { isNil "cti_winner" } do {
 	} forEach cti_sides;
 };
 
+// TODO: Everyone shouldn't really win here
 "EveryoneWon" call BIS_fnc_endMissionServer;

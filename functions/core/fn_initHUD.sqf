@@ -21,7 +21,7 @@ if (hasInterface) then {
 			_label ctrlSetText (format ["$%1", _money]);
 		};
 		_moneyVar addPublicVariableEventHandler _fnc_onMoneyChange;
-		if (isServer) then {
+		if (isServer && hasInterface) then {
 			waitUntil {!isNil _moneyVar};
 			[_moneyVar, missionNamespace getVariable [_moneyVar, -1]] call _fnc_onMoneyChange;
 		};
