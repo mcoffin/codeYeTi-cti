@@ -14,7 +14,8 @@ switch (_stage) do {
 
 			_hqFlag = (synchronizedObjects _x) select 0;
 			["AmmoboxInit", [_hqFlag, false, { side player == _side }]] call BIS_fnc_arsenal;
-			[_hqFlag, ["H_PilotHelmetFighter_O"]] call BIS_fnc_addVirtualItemCargo;
+			private _arsenalItems = getArray (missionConfigFile >> "codeYeTi_cti_config" >> "factions" >> (str _side) >> "arsenalItems");
+			[_hqFlag, _arsenalItems] call BIS_fnc_addVirtualItemCargo;
 
 			_hqSafeZoneRadius = getNumber (missionConfigFile >> "codeYeTi_cti_config" >> "Headquarters" >> "safeZoneRadius");
 			_safeZoneMarker = format ["safezone_%1_hq", _side call CTI_fnc_respawnPrefix];

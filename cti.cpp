@@ -1,9 +1,20 @@
 class factions {
-	class WEST {
-		markerType = "flag_NATO";
+	class FactionBase {
+		#include "prices.cpp"
 	};
-	class EAST {
+	class WEST: FactionBase {
+		markerType = "flag_NATO";
+
+		arsenalItems[] = {
+			"H_PilotHelmetFighter_B"
+		};
+	};
+	class EAST: FactionBase {
 		markerType = "flag_CSAT";
+
+		arsenalItems[] = {
+			"H_PilotHelmetFighter_O"
+		};
 	};
 };
 
@@ -27,8 +38,4 @@ class HoldActions {
 		idleIcon = "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa";
 		progressIcon = "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa";
 	};
-};
-
-class Prices {
-	#include "prices.cpp"
 };
