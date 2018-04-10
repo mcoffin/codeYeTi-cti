@@ -6,7 +6,7 @@ class cti_HUD {
 	fadein = 0;
 	fadeout = 0;
 	name = "cti_HUD";
-	onLoad = "cti_hud = (_this select 0);";
+	onLoad = "with uiNamespace do { cti_hud = _this select 0; };";
 	objects[] = {};
 	class controls {
 		define(HEALTH_BAR_WIDTH, `(safezoneW * 0.1)')dnl

@@ -1,6 +1,6 @@
-disableSerialization;
 if (hasInterface) then {
 	[] spawn {
+		disableSerialization;
 		private ["_dmg", "_hudBase", "_hudDisplay", "_fnc_onMoneyChange", "_moneyVar"];
 		_hudBase = 1000;
 
@@ -9,15 +9,15 @@ if (hasInterface) then {
 		cti_hudLayer = ["cti_hudLayer"] call BIS_fnc_rscLayer;
 		cti_hudLayer cutRsc ["cti_HUD", "PLAIN"];
 
-		waitUntil {! isNil "cti_hud"};
-		_hudDisplay = cti_hud;
+		waitUntil {! isNil {uiNamespace getVariable "cti_hud"}};
+		_hudDisplay = uiNamespace getVariable "cti_hud";
 
 		[_hudDisplay, _hudBase, 1.0] call CTI_fnc_updateProgressBar;
 
 		_moneyVar = format ["cti_money_%1", getPlayerUID player];
 		_fnc_onMoneyChange = {
 			private _money = _this select 1;
-			private _label = cti_hud displayCtrl 1010;
+			private _label = (uiNamespace getVariable "cti_hud") displayCtrl 1010;
 			_label ctrlSetText (format ["$%1", _money]);
 		};
 		_moneyVar addPublicVariableEventHandler _fnc_onMoneyChange;
