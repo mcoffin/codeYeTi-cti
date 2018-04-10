@@ -43,6 +43,17 @@ class optic_ERCO_blk_F: optic_base {};
 class optic_ERCO_khk_F: optic_base {};
 class optic_ERCO_snd_F: optic_base {};
 class optic_hamr: optic_base {};
+class optic_Hamr_khk_F: optic_base {};
+class optic_aco: optic_base {
+	price = 100;
+};
+class optic_aco_smg: optic_aco {};
+class optic_ACO_grn: optic_aco {};
+class optic_ACO_grn_smg: optic_aco {};
+class optic_Holosight: optic_base {
+	price = 100;
+};
+class optic_Holosight_smg: optic_Holosight {};
 
 class basic_item_base {
 	price = 0;

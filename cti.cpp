@@ -24,7 +24,14 @@ class factions {
 			"optic_ERCO_blk_F",
 			"optic_ERCO_khk_F",
 			"optic_ERCO_snd_F",
-			"optic_hamr"
+			"optic_hamr",
+			"optic_Hamr_khk_F",
+			"optic_ACO_grn",
+			"optic_aco",
+			"optic_ACO_grn_smg",
+			"optic_aco_smg",
+			"optic_Holosight",
+			"optic_Holosight_smg"
 		};
 		arsenalMagazineBlacklist[] = {};
 	};
