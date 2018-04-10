@@ -6,7 +6,8 @@ if (hasInterface) then {
 
 		waitUntil {! isNull findDisplay 46};
 
-		cutRsc ["cti_HUD", "PLAIN"];
+		cti_hudLayer = ["cti_hudLayer"] call BIS_fnc_rscLayer;
+		cti_hudLayer cutRsc ["cti_HUD", "PLAIN"];
 
 		waitUntil {! isNil "cti_hud"};
 		_hudDisplay = cti_hud;
