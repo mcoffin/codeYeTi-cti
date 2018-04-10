@@ -8,9 +8,13 @@ switch (_stage) do {
 	};
 	case "postInit": {
 		{
-			private ["_logicGroup", "_respawn", "_hqSafeZoneRadius", "_safeZoneMarker"];
+			private ["_logicGroup", "_respawn", "_hqSafeZoneRadius", "_safeZoneMarker", "_hqFlag"];
 
 			_side = [_x] call CTI_fnc_logicSide;
+
+			_hqFlag = (synchronizedObjects _x) select 0;
+			["AmmoboxInit", [_hqFlag, false, { side player == _side }]] call BIS_fnc_arsenal;
+			[_hqFlag, ["H_PilotHelmetFighter_O"]] call BIS_fnc_addVirtualItemCargo;
 
 			_hqSafeZoneRadius = getNumber (missionConfigFile >> "codeYeTi_cti_config" >> "Headquarters" >> "safeZoneRadius");
 			_safeZoneMarker = format ["safezone_%1_hq", _side call CTI_fnc_respawnPrefix];
@@ -54,6 +58,31 @@ switch (_stage) do {
 				[nil, getPlayerUID player, profileName, false, clientOwner] call _fnc_onPlayerConnected;
 			};
 			[] spawn CTI_fnc_ownershipLoop;
+		};
+
+		if (hasInterface) then {
+			[] spawn {
+				while {isNil "cti_winner"} do {
+					private ["_moneyVar", "_money", "_price"];
+					waitUntil { !isNull (uiNamespace getVariable "RSCDisplayArsenal" ) };
+					systemChat format ["%1 opened arsenal", profileName];
+					[player, "cti_loadout"] call CTI_fnc_saveLoadout;
+					waitUntil { isNull (uiNamespace getVariable "RSCDisplayArsenal") };
+					systemChat format ["%1 closed arsenal", profileName];
+					_moneyVar = format ["cti_money_%1", getPlayerUID player];
+					_money = missionNamespace getVariable [_moneyVar, -1];
+					_price = [player, "cti_loadout"] call CTI_fnc_loadoutPrice;
+					if (_price > _money) then {
+						[player, "cti_loadout"] call CTI_fnc_applyLoadout;
+						hint format ["You can't afford a loadout that costs $%1", _price];
+					} else {
+						_money = _money - _price;
+						missionNamespace setVariable [_moneyVar, _money];
+						publicVariableServer _moneyVar;
+						systemChat format ["%1 bought $%2 worth of gear.", profileName, _price];
+					};
+				};
+			};
 		};
 	};
 };

@@ -26,6 +26,11 @@ class CfgFunctions {
 			class updateCapMarker {};
 			class ownershipLoop {};
 			class setSafeZone {};
+			class saveLoadout {};
+			class applyLoadout {};
+			class deleteLoadout {};
+			class itemPrice {};
+			class loadoutPrice {};
 		};
 		class utilities {
 			class respawnPrefix {};

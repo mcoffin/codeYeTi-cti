@@ -25,7 +25,7 @@ if (hasInterface) then {
 			[_moneyVar, missionNamespace getVariable [_moneyVar, -1]] call _fnc_onMoneyChange;
 		};
 
-		while {!isNil "cti_winner"} do {
+		while {isNil "cti_winner"} do {
 			_dmg = damage player;
 			waitUntil {!(_dmg == (damage player))};
 			[_hudDisplay, _hudBase, 1.0 - (damage player)] call CTI_fnc_updateProgressBar;
