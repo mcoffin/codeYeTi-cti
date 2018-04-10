@@ -1,3 +1,14 @@
+class uniform_base {
+	price = 0;
+};
+
+class uniform_csat: uniform_base {
+	price = 500;
+};
+
+class U_O_CombatUniform_ocamo: uniform_csat {};
+class U_O_CombatUniform_oucamo: uniform_csat {};
+
 class H_PilotHelmetFighter_Base {
 	price = 500;
 };
@@ -74,3 +85,21 @@ class ItemMap: basic_item_base {};
 class ItemGPS {
 	price = 100;
 };
+
+class vest_l3_base {
+	price = 1000;
+};
+
+class V_TacVest_khk: vest_l3_base {};
+class V_TacVest_oli: vest_l3_base {};
+
+class vest_l4_base {
+	price = 2000;
+};
+
+class V_EOD_blue_F: vest_l4_base {};
+class V_EOD_coyote_F: vest_l4_base {};
+class V_EOD_olive_F: vest_l4_base {};
+class V_PlateCarrierGL_rgr: vest_l4_base {};
+class V_PlateCarrierGL_mtp: vest_l4_base {};
+class V_PlateCarrierGL_tna_F: vest_l4_base {};

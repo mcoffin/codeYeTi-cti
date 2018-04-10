@@ -31,7 +31,7 @@ class factions {
 			"optic_ACO_grn_smg",
 			"optic_aco_smg",
 			"optic_Holosight",
-			"optic_Holosight_smg"
+			"optic_Holosight_smg",
 		};
 		arsenalMagazineBlacklist[] = {};
 	};
@@ -55,7 +55,13 @@ class factions {
 			"U_B_CTRG_1",
 			"U_B_CTRG_2",
 			"U_B_CTRG_3",
-			"U_B_Wetsuit"
+			"U_B_Wetsuit",
+			"V_PlateCarrierGL_rgr",
+			"V_PlateCarrierGL_mtp",
+			"V_PlateCarrierGL_tna_F",
+			"V_EOD_blue_F",
+			"V_EOD_coyote_F",
+			"V_EOD_olive_F"
 		};
 	};
 	class EAST: FactionBase {
@@ -69,7 +75,11 @@ class factions {
 		};
 
 		arsenalItems[] += {
-			"H_PilotHelmetFighter_O"
+			"H_PilotHelmetFighter_O",
+			"U_O_CombatUniform_ocamo",
+			"U_O_CombatUniform_oucamo",
+			"V_TacVest_khk",
+			"V_TacVest_oli"
 		};
 	};
 };
