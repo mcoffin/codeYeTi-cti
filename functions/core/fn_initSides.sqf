@@ -5,6 +5,7 @@ switch (_stage) do {
 	case "preInit": {
 		cti_sides = [];
 		cti_caps = [];
+		cti_mhqs = [];
 	};
 	case "postInit": {
 		{
@@ -51,6 +52,7 @@ switch (_stage) do {
 			_markerName setMarkerTypeLocal _markerType;
 			_markerName setMarkerTextLocal "HQ";
 		} forEach cti_sides;
+		{ [_x] call CTI_fnc_initMHQ; } forEach (synchronizedObjects cti_mhqModule);
 
 		if (isServer) then {
 			private ["_fnc_onPlayerConnected"];

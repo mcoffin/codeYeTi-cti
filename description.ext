@@ -34,6 +34,7 @@ class CfgFunctions {
 			class canCapture {};
 			class paycheck {};
 			class paycheckLoop {};
+			class initMHQ {};
 		};
 		class utilities {
 			class respawnPrefix {};
