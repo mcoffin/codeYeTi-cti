@@ -1,5 +1,5 @@
 params ["_unit", "_prefix"];
-private ["_headgear", "_uniform", "_vest", "_backpack"];
+private ["_headgear", "_uniform", "_vest", "_backpack", "_items", "_magazines"];
 
 removeAllWeapons _unit;
 removeAllItems _unit;
@@ -37,9 +37,13 @@ if (!isNil "_weapons") then {
 		_weaponIndex = _forEachIndex;
 		_weaponName = (_x select 0);
 		if (_weaponName != "") then {
-			_unit addWeapon (_x select 0);
-			for "_idx" from 1 to 3 do {
+			_unit addMagazine (_x select 4);
+			_unit addWeapon _weaponName;
+			for "_idx" from 1 to 5 do {
 				_itemName = _x select _idx;
+				if (_idx == 4) then {
+					_itemName = "";
+				};
 				if (_itemName != "") then {
 					switch (_weaponIndex) do {
 						case 0: {
@@ -56,4 +60,13 @@ if (!isNil "_weapons") then {
 			};
 		};
 	} forEach _weapons;
+};
+
+_items = _unit getVariable [format ["%1_items", _prefix], []];
+_magazines = _unit getVariable [format ["%1_magazines", _prefix], []];
+if (!isNil "_magazines") then {
+	_items append _magazines;
+};
+if (!isNil "_items") then {
+	{ _unit addItem _x } forEach _items;
 };

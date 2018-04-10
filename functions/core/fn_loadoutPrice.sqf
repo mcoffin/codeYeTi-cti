@@ -1,5 +1,5 @@
 params ["_unit", "_prefix"];
-private ["_purchases", "_fnc_getLoadoutVariable", "_total", "_items", "_checkedItems", "_weapons"];
+private ["_purchases", "_fnc_getLoadoutVariable", "_total", "_items", "_checkedItems", "_newItems", "_weapons"];
 
 _fnc_getLoadoutVariable = {
 	_unit getVariable (format ["%1_%2", _prefix, _this]);
@@ -46,7 +46,10 @@ _weapons = "weapons" call _fnc_getLoadoutVariable;
 } forEach (weaponsItems _unit);
 
 _items = "items" call _fnc_getLoadoutVariable;
+_items append ("magazines" call _fnc_getLoadoutVariable);
 _checkedItems = [];
+_newItems = items _unit;
+_newItems append (magazines _unit);
 {
 	if (_checkedItems find _x < 0) then {
 		private ["_newCount", "_oldCount", "_itemName"];
@@ -58,7 +61,7 @@ _checkedItems = [];
 			_purchases append [[_itemName, _newCount - _oldCount]];
 		};
 	};
-} forEach (items _unit);
+} forEach (_newItems);
 
 {
 	private _item = _x select 0;
