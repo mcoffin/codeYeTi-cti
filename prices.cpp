@@ -18,6 +18,13 @@ class arifle_SPAR_01_blk_F: arifle_base {};
 class arifle_SPAR_01_khk_F: arifle_base {};
 class arifle_SPAR_01_snd_F: arifle_base {};
 
+class arifle_65_base {
+	price = 1500;
+};
+
+class arifle_Katiba_F: arifle_65_base {};
+class arifle_Katiba_C_F: arifle_65_base {};
+
 class srifle_base {
 	price = 4000;
 };

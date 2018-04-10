@@ -63,7 +63,9 @@ class factions {
 
 		arsenalWeapons[] += {
 			"arifle_TRG20_F",
-			"arifle_TRG21_F"
+			"arifle_TRG21_F",
+			"arifle_Katiba_F",
+			"arifle_Katiba_C_F"
 		};
 
 		arsenalItems[] += {
