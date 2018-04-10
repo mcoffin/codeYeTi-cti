@@ -8,7 +8,7 @@ switch (_stage) do {
 	};
 	case "postInit": {
 		{
-			private ["_logicGroup", "_respawn", "_hqSafeZoneRadius", "_safeZoneMarker", "_hqFlag"];
+			private ["_logicGroup", "_respawn", "_hqSafeZoneRadius", "_safeZoneMarker", "_hqFlag", "_arsenalMagazines"];
 
 			_side = [_x] call CTI_fnc_logicSide;
 
@@ -18,7 +18,15 @@ switch (_stage) do {
 			private _arsenalItems = getArray (_sideConfig >> "arsenalItems");
 			[_hqFlag, _arsenalItems] call BIS_fnc_addVirtualItemCargo;
 			private _arsenalWeapons = getArray (_sideConfig >> "arsenalWeapons");
+			_arsenalMagazines = [];
+			{
+				private _mags = getArray (configFile >> "CfgWeapons" >> _x >> "magazines");
+				_arsenalMagazines append _mags;
+			} forEach _arsenalWeapons;
 			[_hqFlag, _arsenalWeapons] call BIS_fnc_addVirtualWeaponCargo;
+			[_hqFlag, _arsenalMagazines] call BIS_fnc_addVirtualMagazineCargo;
+			private _blacklistMagazines = getArray (_sideConfig >> "arsenalMagazineBlacklist");
+			[_hqFlag, _blacklistMagazines] call BIS_fnc_removeVirtualMagazineCargo;
 
 			_hqSafeZoneRadius = getNumber (missionConfigFile >> "codeYeTi_cti_config" >> "Headquarters" >> "safeZoneRadius");
 			_safeZoneMarker = format ["safezone_%1_hq", _side call CTI_fnc_respawnPrefix];

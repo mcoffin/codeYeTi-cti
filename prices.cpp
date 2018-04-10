@@ -39,3 +39,7 @@ class optic_MRCO: optic_base {};
 class optic_Arco: optic_base {};
 class optic_Arco_blk_F: optic_base {};
 class optic_Arco_ghex_F: optic_base {};
+class optic_ERCO_blk_F: optic_base {};
+class optic_ERCO_khk_F: optic_base {};
+class optic_ERCO_snd_F: optic_base {};
+class optic_hamr: optic_base {};

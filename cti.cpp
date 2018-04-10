@@ -15,8 +15,13 @@ class factions {
 			"optic_MRCO",
 			"optic_Arco",
 			"optic_Arco_blk_F",
-			"optic_Arco_ghex_F"
+			"optic_Arco_ghex_F",
+			"optic_ERCO_blk_F",
+			"optic_ERCO_khk_F",
+			"optic_ERCO_snd_F",
+			"optic_hamr"
 		};
+		arsenalMagazineBlacklist[] = {};
 	};
 	class WEST: FactionBase {
 		markerType = "flag_NATO";
@@ -30,7 +35,15 @@ class factions {
 		};
 
 		arsenalItems[] += {
-			"H_PilotHelmetFighter_B"
+			"H_PilotHelmetFighter_B",
+			"U_B_CombatUniform_mcam",
+			"U_B_CombatUniform_mcam_tshirt",
+			"U_B_T_Soldier_AR_F",
+			"U_B_T_Soldier_F",
+			"U_B_CTRG_1",
+			"U_B_CTRG_2",
+			"U_B_CTRG_3",
+			"U_B_Wetsuit"
 		};
 	};
 	class EAST: FactionBase {
