@@ -28,3 +28,7 @@ class HoldActions {
 		progressIcon = "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa";
 	};
 };
+
+class Prices {
+	#include "prices.cpp"
+};

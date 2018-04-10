@@ -1,3 +1,4 @@
+include(`progress_bar.m4')
 class cti_HUD {
 	idd = 1000;
 	duration = 10e10;
