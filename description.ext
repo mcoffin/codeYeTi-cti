@@ -32,6 +32,8 @@ class CfgFunctions {
 			class itemPrice {};
 			class loadoutPrice {};
 			class canCapture {};
+			class paycheck {};
+			class paycheckLoop {};
 		};
 		class utilities {
 			class respawnPrefix {};

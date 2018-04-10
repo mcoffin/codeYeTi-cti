@@ -86,6 +86,8 @@ class factions {
 
 class Player {
 	startingMoney = 5000;
+	paycheck = 250;
+	tickDuration = 60;
 };
 
 class Headquarters {

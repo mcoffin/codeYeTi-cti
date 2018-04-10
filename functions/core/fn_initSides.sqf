@@ -73,6 +73,7 @@ switch (_stage) do {
 		};
 
 		if (hasInterface) then {
+			[] spawn CTI_fnc_paycheckLoop;
 			[] spawn {
 				while {isNil "cti_winner"} do {
 					private ["_moneyVar", "_money", "_price"];
