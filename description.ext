@@ -74,7 +74,7 @@ class RscProgress {
 };
 
 class RscTitles {
-	#include "dialogs/hud.hpp"
+	#include "dialogs\hud.hpp"
 };
 
 class codeYeTi_cti_config {
