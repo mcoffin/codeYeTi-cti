@@ -2,7 +2,7 @@ params ["_unit"];
 private ["_actionConfig"];
 
 _actionConfig = missionConfigFile >> "codeYeTi_cti_config" >> "HoldActions" >> "Revive";
-
+systemChat "in revive call";
 [
 	_unit,
 	"Revive",

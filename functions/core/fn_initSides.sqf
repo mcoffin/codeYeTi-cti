@@ -94,6 +94,9 @@ switch (_stage) do {
 						_money = _money - _price;
 						missionNamespace setVariable [_moneyVar, _money];
 						publicVariableServer _moneyVar;
+						if (!isServer) then {
+							[format ["cti_money_%1", getPlayerUID player], _money] call CTI_fnc_onMoneyChanged;
+						};
 						systemChat format ["%1 bought $%2 worth of gear.", profileName, _price];
 					};
 				};

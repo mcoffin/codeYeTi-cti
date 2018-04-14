@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=130;
+		nextID=131;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=35;
+		nextID=40;
 	};
 	class Camera
 	{
-		pos[]={4493.2959,64.980087,3013.4585};
-		dir[]={-0.35039109,-0.576258,0.73834616};
-		up[]={-0.24706136,0.81726635,0.52060986};
-		aside[]={0.90343076,-8.58563e-008,0.42873436};
+		pos[]={4513.2793,87.179901,3012.2539};
+		dir[]={-0.53580403,-0.50776428,0.67461056};
+		up[]={-0.31580046,0.86149549,0.39761299};
+		aside[]={0.78306615,-1.0337681e-007,0.62194431};
 	};
 };
 binarizationWanted=0;
@@ -617,7 +617,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="_this setGroupID [_value];";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
 					class Value
 					{
 						class data
@@ -680,8 +680,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4481.5259,49.02467,3026.8625};
-				angles[]={6.2698536,0,0.095706008};
+				position[]={4480.666,48.946934,3026.9888};
+				angles[]={6.2698536,0,0.090419561};
 			};
 			init="cti_sides append [this];";
 			id=39;

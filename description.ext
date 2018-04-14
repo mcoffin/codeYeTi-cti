@@ -35,6 +35,8 @@ class CfgFunctions {
 			class paycheck {};
 			class paycheckLoop {};
 			class initMHQ {};
+			class onMoneyChanged {};
+			class copyLoadout {};
 		};
 		class utilities {
 			class respawnPrefix {};
