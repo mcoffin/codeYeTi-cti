@@ -39,7 +39,6 @@ while { isNil "cti_winner" } do {
 					_ownership
 				};
 				if (_ownership < 75) then {
-					[_cap, _cap getVariable "cti_name", _owningSide, _controllingSide] remoteExecCall ["CTI_fnc_onContestedLocal", 0];
 				};
 				_cap setVariable ["cti_ownership", _ownership];
 			} else {

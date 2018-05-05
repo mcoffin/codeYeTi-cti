@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=40;
+		nextID=43;
 	};
 	class Camera
 	{
-		pos[]={4513.2793,87.179901,3012.2539};
-		dir[]={-0.53580403,-0.50776428,0.67461056};
-		up[]={-0.31580046,0.86149549,0.39761299};
-		aside[]={0.78306615,-1.0337681e-007,0.62194431};
+		pos[]={4514.5562,81.671356,3017.1221};
+		dir[]={-0.78654313,-0.47078276,0.39965722};
+		up[]={-0.4197109,0.8822481,0.21326338};
+		aside[]={0.45299655,-7.4505806e-009,0.89151776};
 	};
 };
 binarizationWanted=0;
@@ -617,7 +617,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
+					expression="_this setGroupID [_value];";
 					class Value
 					{
 						class data
